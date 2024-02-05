@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebGitEditorCOnfigActions.Controllers
+namespace WebGitEditorConfigActions.Controllers
 {
     [ApiController]
     [Route("[controller]")]

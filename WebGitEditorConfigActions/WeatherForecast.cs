@@ -1,4 +1,4 @@
-namespace WebGitEditorCOnfigActions
+namespace WebGitEditorConfigActions
 {
     public class WeatherForecast
     {
