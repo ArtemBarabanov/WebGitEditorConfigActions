@@ -13,20 +13,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: checkout repo
-      uses: actions/checkout@v3
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: ${{ env.DOTNET_VERSION }}
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
 
-    - name: Restore
-      run: dotnet restore ./WebGitEditorConfigActions.sln
+      - name: Restore
+        run: dotnet restore ./WebGitEditorConfigActions.sln
 
-    - name: Build
-      run: dotnet build ./WebGitEditorConfigActions.sln --configuration Release --no-restore
+      - name: Build
+        run: dotnet build ./WebGitEditorConfigActions.sln --configuration Release --no-restore
 
-    - name: Test
-      run: dotnet test ./WebGitEditorConfigActions.sln --configuration Release --no-restore --no-build
+      - name: Test
+        run: dotnet test ./WebGitEditorConfigActions.sln --configuration Release --no-restore --no-build
